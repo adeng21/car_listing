@@ -4,5 +4,6 @@
   <%= f.input :year, collection: 1980..2014 %>
   <%= f.input :color %>
   <%= f.input :description, required: false%>
+  <%= f.association :manufacturer, collection: Manufacturer.all, label_method: :name, value_method: :id%>
   <%= f.button :submit, "Submit New Car" %>
 <%end%>
